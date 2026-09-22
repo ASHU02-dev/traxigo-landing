@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TraxiGo 4G Mini Vehicle GPS Tracker — live tracking, geofencing, alerts and route playback.">
+  <meta name="theme-color" content="#0879d1">
+  <title>TraxiGo™ 4G Mini GPS Tracker | Official Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#0879d1;--blue2:#35a8ff;--navy:#071727;--ink:#0b1726}
+    html{scroll-behavior:smooth}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:#f7fbff;color:var(--ink);padding-bottom:92px}
+    .brand-gradient{background:linear-gradient(135deg,#0568bd,#21a6f5)}
+    .brand-text{background:linear-gradient(135deg,#0568bd,#21a6f5);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .shadow-soft{box-shadow:0 16px 45px rgba(9,58,100,.10)}
+    .pulse{animation:pulse 2.2s infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(8,121,209,.34)}50%{box-shadow:0 0 0 11px rgba(8,121,209,0)}}
+    .gallery-thumb.active{border-color:#0879d1;box-shadow:0 0 0 2px rgba(8,121,209,.12)}
+    .sticky-buy{padding-bottom:max(12px,env(safe-area-inset-bottom))}.media-frame{background:#f1f5f9;display:flex;align-items:center;justify-content:center}.media-frame video,.media-frame img{object-fit:contain!important;object-position:center;width:100%;height:100%;display:block}.cart-modal{background:rgba(3,15,28,.62);backdrop-filter:blur(5px)}
+    .modal-backdrop{background:rgba(3,15,28,.62);backdrop-filter:blur(5px)}
+    .faq-answer{display:none}.faq.open .faq-answer{display:block}.faq.open .faq-icon{transform:rotate(45deg)}
+    .faq-icon{transition:transform .2s}
+    @media(max-width:640px){body{padding-bottom:106px}.sticky-buy .label{display:none}}
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Top offer -->
+  <div class="brand-gradient text-white px-4 py-2.5 text-center text-xs md:text-sm font-bold">
+    ⚡ LIMITED LAUNCH OFFER: Free 4G SIM + 1st Month Recharge Included • COD Available
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center shrink-0" aria-label="TraxiGo home">
+        <img src="./assets/traxigo-logo.png" alt="TraxiGo" class="h-10 md:h-12 w-auto max-w-[190px] object-contain" loading="eager">
+      </a>
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> In Stock
+        </span>
+        <a href="#order" class="brand-gradient text-white text-xs md:text-sm font-extrabold px-4 py-2.5 rounded-xl shadow-md">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-4 pt-7 md:pt-12">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start">
+        <div>
+          <div class="relative bg-white rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+            <div class="absolute top-4 left-4 z-10 bg-red-600 text-white text-[10px] md:text-xs font-black px-3 py-1.5 rounded-lg">80% OFF TODAY</div>
+            <div class="absolute top-4 right-4 z-10 bg-white/90 border border-slate-200 text-slate-700 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-lg">🇮🇳 Made in India</div>
+            <div class="p-3 md:p-5">
+              <div class="media-frame aspect-[16/10] md:aspect-video rounded-2xl overflow-hidden relative">
+                <img id="mainMedia" src="./assets/feature-hero.jpg" alt="TraxiGo GPS tracker app" class="hidden w-full h-full" loading="eager">
+                <video id="mainVideo" class="w-full h-full" autoplay muted loop playsinline preload="auto" poster="./assets/product.jpg">
+                  <source src="./assets/product-demo.mp4" type="video/mp4">
+                </video>
+                <div id="mediaFallback" class="hidden absolute inset-0 items-center justify-center p-6 text-center bg-slate-100 text-slate-500 text-xs font-bold">Media could not be loaded. Please make sure the <b>assets</b> folder is uploaded with this page.</div>
+              </div>
+              <div id="thumbs" class="grid grid-cols-6 gap-2 mt-3">
+                <button class="gallery-thumb active rounded-xl overflow-hidden border-2 border-transparent bg-slate-900 relative" data-src="./assets/product-demo.mp4" data-type="video" aria-label="Play product video">
+                  <div class="absolute inset-0 flex items-center justify-center text-white text-2xl">▶</div>
+                  <span class="sr-only">Product video</span>
+                  <img src="./assets/product.jpg" class="w-full aspect-square object-cover opacity-55" alt="Product video thumbnail">
+                </button>
+                <button class="gallery-thumb rounded-xl overflow-hidden border-2 border-transparent bg-slate-100" data-src="./assets/feature-hero.jpg" data-type="image"><img src="./assets/feature-hero.jpg" class="w-full aspect-square object-cover" alt="TraxiGo app preview"></button>
+                <button class="gallery-thumb rounded-xl overflow-hidden border-2 border-transparent bg-slate-100" data-src="./assets/features.jpg" data-type="image"><img src="./assets/features.jpg" class="w-full aspect-square object-cover" alt="TraxiGo features"></button>
+                <button class="gallery-thumb rounded-xl overflow-hidden border-2 border-transparent bg-slate-100" data-src="./assets/product.jpg" data-type="image"><img src="./assets/product.jpg" class="w-full aspect-square object-cover" alt="TraxiGo product"></button>
+                <button class="gallery-thumb rounded-xl overflow-hidden border-2 border-transparent bg-slate-100" data-src="./assets/tracking.jpg" data-type="image"><img src="./assets/tracking.jpg" class="w-full aspect-square object-cover" alt="TraxiGo real-time tracking"></button>
+                <button class="gallery-thumb rounded-xl overflow-hidden border-2 border-transparent bg-slate-100" data-src="./assets/alerts.jpg" data-type="image"><img src="./assets/alerts.jpg" class="w-full aspect-square object-cover" alt="TraxiGo alerts"></button>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 md:gap-3 mt-3">
+            <div class="bg-white border rounded-2xl p-3 text-center"><div class="text-lg">🚚</div><div class="text-[11px] md:text-xs font-extrabold">Fast Delivery</div><div class="text-[9px] text-slate-500">3–5 Days India-wide</div></div>
+            <div class="bg-white border rounded-2xl p-3 text-center"><div class="text-lg">🛡️</div><div class="text-[11px] md:text-xs font-extrabold">1-Year Warranty</div><div class="text-[9px] text-slate-500">Replacement Support</div></div>
+            <div class="bg-white border rounded-2xl p-3 text-center"><div class="text-lg">💵</div><div class="text-[11px] md:text-xs font-extrabold">Cash on Delivery</div><div class="text-[9px] text-slate-500">COD Available</div></div>
+          </div>
+        </div>
+
+        <div class="lg:pt-3">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-amber-400 tracking-wide">★★★★★</span>
+            <span class="text-xs font-bold">4.8/5.0</span>
+            <span class="text-xs text-slate-500">530+ Verified Reviews</span>
+          </div>
+          <h1 class="text-3xl md:text-5xl font-black leading-[1.05] tracking-tight">TraxiGo™ Mini 4G <span class="brand-text">GPS Tracker</span></h1>
+          <p class="text-base md:text-lg font-semibold text-slate-600 mt-3">Live Tracking • Geo-Fence • Alerts • Route Playback • Remote Engine Control</p>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed">A compact wired vehicle tracker for bikes, cars, scooters, EVs, auto-rickshaws and trucks, with control from your mobile app.</p>
+
+          <div class="mt-5 bg-white border border-blue-100 rounded-2xl p-4 md:p-5 shadow-soft">
+            <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
+              <span class="text-4xl font-black">₹790</span>
+              <span class="text-lg text-slate-400 line-through">₹3,999</span>
+              <span class="text-xs font-black text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full">Save ₹3,209</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">Inclusive of 18% GST • No hidden charges</p>
+            <div class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200 px-2.5 py-1 text-[10px] font-black text-emerald-700">✓ Cash on Delivery Available</div>
+            <div class="grid grid-cols-2 gap-2 mt-4">
+              <div class="rounded-xl bg-blue-50 p-3"><b class="text-sm">24/7</b><div class="text-[10px] text-slate-600">Live location</div></div>
+              <div class="rounded-xl bg-blue-50 p-3"><b class="text-sm">365 days</b><div class="text-[10px] text-slate-600">History playback</div></div>
+            </div>
+          </div>
+
+          <div class="mt-5 bg-white border rounded-2xl p-5">
+            <h2 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">Key Highlights</h2>
+            <ul class="space-y-3 text-sm">
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-black shrink-0">✓</span><span><b>Remote Engine Cut-Off:</b> Control the vehicle from the app where supported by installation.</span></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-black shrink-0">✓</span><span><b>Real-Time GPS:</b> View the vehicle location and route from the mobile app.</span></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-black shrink-0">✓</span><span><b>Geo-Fence & Alerts:</b> Get notifications when configured zones are entered or exited.</span></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-black shrink-0">✓</span><span><b>365-Day Playback:</b> Review stored trip history according to the service plan.</span></li>
+              <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-black shrink-0">✓</span><span><b>Free 4G SIM:</b> Includes the first-month recharge as stated in the offer.</span></li>
+            </ul>
+          </div>
+
+          <div class="mt-5 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/70 to-white p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200 px-3 py-1 text-[11px] font-black text-emerald-700">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> COD AVAILABLE
+              </span>
+              <span class="text-[11px] text-slate-500">Pay when your order is delivered</span>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div class="rounded-xl bg-white border border-slate-100 p-3">
+                <div class="w-7 h-7 rounded-lg brand-gradient text-white flex items-center justify-center text-xs font-black">1</div>
+                <h3 class="font-black text-xs mt-2">Order & Receive</h3>
+                <p class="text-[10px] leading-relaxed text-slate-500 mt-1">Free 4G SIM + first-month recharge, ready to plug in.</p>
+              </div>
+              <div class="rounded-xl bg-white border border-slate-100 p-3">
+                <div class="w-7 h-7 rounded-lg brand-gradient text-white flex items-center justify-center text-xs font-black">2</div>
+                <h3 class="font-black text-xs mt-2">Connect in 15 Mins</h3>
+                <p class="text-[10px] leading-relaxed text-slate-500 mt-1">Quick hidden wired installation by a local vehicle electrician.</p>
+              </div>
+              <div class="rounded-xl bg-white border border-slate-100 p-3">
+                <div class="w-7 h-7 rounded-lg brand-gradient text-white flex items-center justify-center text-xs font-black">3</div>
+                <h3 class="font-black text-xs mt-2">Download App</h3>
+                <p class="text-[10px] leading-relaxed text-slate-500 mt-1">Login on Android or iOS and control your connected vehicle.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <button type="button" onclick="openOrder()" class="brand-gradient text-white font-black py-4 rounded-xl shadow-lg pulse">BUY NOW →</button>
+            <button type="button" onclick="addToCart()" class="bg-white border-2 border-blue-600 text-blue-700 font-black py-4 rounded-xl hover:bg-blue-50">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature banner -->
+    <section class="max-w-7xl mx-auto px-4 mt-14">
+      <div class="grid md:grid-cols-2 gap-4">
+        <img src="./assets/features.jpg" alt="TraxiGo real time tracking features" class="w-full rounded-3xl shadow-soft border object-cover">
+        <img src="./assets/alerts.jpg" alt="TraxiGo geofence and ignition alerts" class="w-full rounded-3xl shadow-soft border object-cover">
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="max-w-7xl mx-auto px-4 mt-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-xs font-black uppercase tracking-[.2em] text-blue-600">Why TraxiGo</p>
+        <h2 class="text-3xl md:text-4xl font-black mt-2">Know where your vehicle is.</h2>
+        <p class="text-sm md:text-base text-slate-600 mt-2">Designed around everyday tracking, security alerts and simple mobile control.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <div class="bg-white rounded-2xl border p-5 shadow-soft"><div class="text-3xl">📍</div><h3 class="font-black mt-3">Live GPS Tracking</h3><p class="text-xs text-slate-600 mt-1">Track your connected vehicle through the app.</p></div>
+        <div class="bg-white rounded-2xl border p-5 shadow-soft"><div class="text-3xl">🛡️</div><h3 class="font-black mt-3">Geo-Fence Alerts</h3><p class="text-xs text-slate-600 mt-1">Create zones such as home or office and receive entry/exit alerts.</p></div>
+        <div class="bg-white rounded-2xl border p-5 shadow-soft"><div class="text-3xl">🔔</div><h3 class="font-black mt-3">Ignition Alerts</h3><p class="text-xs text-slate-600 mt-1">Stay informed when the configured ignition status changes.</p></div>
+        <div class="bg-white rounded-2xl border p-5 shadow-soft"><div class="text-3xl">📊</div><h3 class="font-black mt-3">Trip Playback</h3><p class="text-xs text-slate-600 mt-1">Review previous journeys and driving information.</p></div>
+      </div>
+    </section>
+
+    <!-- Product visual -->
+    <section class="max-w-7xl mx-auto px-4 mt-14">
+      <div class="bg-white border rounded-3xl overflow-hidden shadow-soft">
+        <div class="grid md:grid-cols-2 items-center">
+          <img src="./assets/product.jpg" alt="TraxiGo 4G Mini Vehicle GPS Tracker product" class="w-full h-full object-cover">
+          <div class="p-7 md:p-10">
+            <p class="text-xs font-black uppercase tracking-[.2em] text-blue-600">4G Mini Vehicle GPS Tracker</p>
+            <h2 class="text-3xl font-black mt-2">Track smarter. Drive safer.</h2>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">The compact wired design is intended for hidden installation and direct vehicle connection. Installation should be carried out by a qualified vehicle electrician.</p>
+            <div class="grid grid-cols-2 gap-3 mt-6 text-xs font-bold">
+              <div class="bg-slate-50 rounded-xl p-3">✓ 4G connectivity</div>
+              <div class="bg-slate-50 rounded-xl p-3">✓ Mobile app</div>
+              <div class="bg-slate-50 rounded-xl p-3">✓ Route history</div>
+              <div class="bg-slate-50 rounded-xl p-3">✓ Safe-zone alerts</div>
+            </div>
+            <button onclick="openOrder()" class="mt-6 brand-gradient text-white font-black px-6 py-3 rounded-xl">Order at ₹790</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compatibility -->
+    <section class="max-w-7xl mx-auto px-4 mt-14">
+      <div class="bg-[#071727] text-white rounded-3xl p-7 md:p-10">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div><p class="text-xs font-black uppercase tracking-[.2em] text-sky-300">Universal Compatibility</p><h2 class="text-3xl font-black mt-2">One tracker. Multiple vehicle types.</h2><p class="text-sm text-slate-300 mt-3">The supplied product material describes compatibility across common Indian vehicle categories.</p></div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs font-bold">
+            <div class="bg-white/10 rounded-xl p-4">🏍️<br>Bikes</div><div class="bg-white/10 rounded-xl p-4">🛵<br>Scooters</div><div class="bg-white/10 rounded-xl p-4">🚗<br>Cars</div>
+            <div class="bg-white/10 rounded-xl p-4">⚡<br>EVs</div><div class="bg-white/10 rounded-xl p-4">🛺<br>Autos</div><div class="bg-white/10 rounded-xl p-4">🚚<br>Trucks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="order" class="max-w-3xl mx-auto px-4 mt-16 scroll-mt-28">
+      <div class="text-center"><p class="text-xs font-black uppercase tracking-[.2em] text-blue-600">Contact Us</p><h2 class="text-3xl md:text-4xl font-black mt-2">Have a question? Contact us</h2><p class="text-sm text-slate-600 mt-2">Share your details and message. Our support team will get back to you.</p></div>
+      <form id="leadForm" action="https://formsubmit.co/support@traxigo.in" method="POST" class="mt-7 bg-white border rounded-3xl p-5 md:p-7 shadow-soft">
+        <input type="hidden" name="_subject" value="TraxiGo Website Contact Query">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="source" value="TraxiGo Meta Ads Landing Page">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="text-xs font-bold">Full Name<input required name="name" class="mt-1 w-full rounded-xl border p-3 text-sm outline-none focus:ring-2 focus:ring-blue-200" placeholder="Your name"></label>
+          <label class="text-xs font-bold">Phone Number<input required name="phone" type="tel" pattern="[0-9+() -]{10,}" class="mt-1 w-full rounded-xl border p-3 text-sm outline-none focus:ring-2 focus:ring-blue-200" placeholder="+91 XXXXX XXXXX"></label>
+          <label class="text-xs font-bold">Email<input name="email" type="email" class="mt-1 w-full rounded-xl border p-3 text-sm outline-none focus:ring-2 focus:ring-blue-200" placeholder="you@example.com"></label>
+          <label class="text-xs font-bold md:col-span-2">Message / Query<textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border p-3 text-sm outline-none focus:ring-2 focus:ring-blue-200" placeholder="Write your query or message"></textarea></label>
+        </div>
+        <button type="submit" class="mt-5 w-full brand-gradient text-white font-black py-4 rounded-xl shadow-lg">SEND QUERY</button>
+        <p id="formStatus" class="text-xs text-center text-slate-500 mt-3">Your details and message will be sent to support@traxigo.in.</p>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto px-4 mt-14">
+      <h2 class="text-3xl font-black text-center">Frequently Asked Questions</h2>
+      <div class="mt-6 space-y-3">
+        <div class="faq bg-white border rounded-2xl overflow-hidden"><button class="w-full p-5 flex justify-between text-left font-black text-sm" onclick="toggleFaq(this)">Is the SIM included? <span class="faq-icon text-xl">+</span></button><div class="faq-answer px-5 pb-5 text-xs text-slate-600">The provided product material states that a 4G SIM is included with the first-month recharge.</div></div>
+        <div class="faq bg-white border rounded-2xl overflow-hidden"><button class="w-full p-5 flex justify-between text-left font-black text-sm" onclick="toggleFaq(this)">What is the renewal charge? <span class="faq-icon text-xl">+</span></button><div class="faq-answer px-5 pb-5 text-xs text-slate-600">The supplied page states ₹999/year after the first month. Confirm the current plan with TraxiGo before purchase.</div></div>
+        <div class="faq bg-white border rounded-2xl overflow-hidden"><button class="w-full p-5 flex justify-between text-left font-black text-sm" onclick="toggleFaq(this)">How is it installed? <span class="faq-icon text-xl">+</span></button><div class="faq-answer px-5 pb-5 text-xs text-slate-600">It is a wired device intended for vehicle connection. Installation should be done by a qualified vehicle electrician.</div></div>
+        <div class="faq bg-white border rounded-2xl overflow-hidden"><button class="w-full p-5 flex justify-between text-left font-black text-sm" onclick="toggleFaq(this)">How do I contact support? <span class="faq-icon text-xl">+</span></button><div class="faq-answer px-5 pb-5 text-xs text-slate-600">Use the Contact Us form above or WhatsApp the TraxiGo support number.</div></div>
+      </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-4 mt-16">
+      <div class="bg-white border rounded-3xl p-7 text-center">
+        <img src="./assets/traxigo-logo.png" alt="TraxiGo" class="h-12 w-auto max-w-[220px] mx-auto object-contain">
+        <p class="text-xs text-slate-500 mt-2">Track • Connect • Move</p>
+        <div class="mt-4 flex justify-center items-center gap-4 text-xs font-bold">
+          <a href="https://wa.me/919914166744" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" class="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.04 0C5.52 0 .22 5.3.22 11.82c0 2.08.54 4.11 1.57 5.9L.12 24l6.43-1.64a11.8 11.8 0 0 0 5.48 1.35h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.15-1.23-6.11-3.34-8.41Z"/></svg>
+          </a>
+        </div>
+        <p class="text-[10px] text-slate-400 mt-5">© 2026 TraxiGo. Product claims and service terms should be verified before publishing.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Sticky conversion bar -->
+  <div class="sticky-buy fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200 shadow-[0_-10px_30px_rgba(0,0,0,.10)]">
+    <div class="max-w-7xl mx-auto px-3 py-2.5 flex items-center gap-2 md:gap-3">
+      <span class="hidden md:inline-flex items-center gap-1.5 shrink-0 rounded-full bg-emerald-50 border border-emerald-200 px-3 py-2 text-[10px] font-black text-emerald-700">✓ COD Available</span>
+      <a href="https://wa.me/919914166744?text=Hi%20TraxiGo%2C%20I%20want%20to%20buy%20the%204G%20Mini%20GPS%20Tracker." target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" class="shrink-0 w-11 h-11 md:w-12 md:h-12 bg-[#25D366] text-white font-black rounded-xl flex items-center justify-center shadow-md">
+        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.04 0C5.52 0 .22 5.3.22 11.82c0 2.08.54 4.11 1.57 5.9L.12 24l6.43-1.64a11.8 11.8 0 0 0 5.48 1.35h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.15-1.23-6.11-3.34-8.41ZM12.04 21.6h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.81.97 1.02-3.71-.23-.38a9.8 9.8 0 1 1 8.39 4.7Zm5.38-7.35c-.29-.15-1.71-.84-1.98-.94-.27-.1-.47-.15-.67.15-.2.29-.76.94-.94 1.14-.17.2-.35.22-.64.07-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.49s1.06 2.89 1.21 3.09c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.23 1.35.2 1.86.12.57-.09 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.57-.35Z"/></svg>
+      </a>
+      <button onclick="openCart()" class="flex-1 bg-white border-2 border-slate-300 text-slate-800 font-black rounded-xl py-3 text-xs md:text-sm">SHOW CART <span id="cartCount" class="ml-1 inline-flex min-w-5 h-5 px-1 items-center justify-center rounded-full bg-slate-900 text-white">0</span></button>
+      <button onclick="addToCart()" class="flex-1 bg-white border-2 border-blue-600 text-blue-700 font-black rounded-xl py-3 text-xs md:text-sm">ADD TO CART</button>
+      <button onclick="openOrder()" class="flex-1 brand-gradient text-white font-black rounded-xl py-3 text-xs md:text-sm pulse">BUY NOW</button>
+    </div>
+  </div>
+
+  <!-- Cart modal -->
+  <div id="cartModal" class="hidden fixed inset-0 z-[65] cart-modal items-end md:items-center justify-center p-0 md:p-4">
+    <div class="bg-white rounded-t-3xl md:rounded-3xl w-full max-w-md p-6 shadow-2xl">
+      <div class="flex justify-between items-center"><div><h3 class="text-xl font-black">Your Cart</h3><p class="text-xs text-slate-500">Payment integration will be added later.</p></div><button onclick="closeCart()" class="text-2xl" aria-label="Close cart">×</button></div>
+      <div class="mt-5 flex items-center gap-3 border rounded-2xl p-3">
+        <img src="./assets/product.jpg" alt="TraxiGo GPS Tracker" class="w-16 h-16 object-contain rounded-xl bg-slate-50">
+        <div class="flex-1"><div class="font-black text-sm">TraxiGo™ Mini 4G GPS Tracker</div><div class="text-xs text-slate-500 mt-1">₹790 each</div></div>
+        <div class="flex items-center gap-2"><button onclick="changeCart(-1)" class="w-8 h-8 rounded-lg border font-black">−</button><span id="cartQty" class="font-black min-w-5 text-center">0</span><button onclick="changeCart(1)" class="w-8 h-8 rounded-lg border font-black">+</button></div>
+      </div>
+      <div class="flex justify-between mt-5 text-sm"><span class="text-slate-500">Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <button onclick="closeCart();document.getElementById('order').scrollIntoView({behavior:'smooth'});" class="w-full mt-5 brand-gradient text-white font-black py-3.5 rounded-xl">CONTINUE TO ORDER</button>
+      <p class="text-[10px] text-center text-slate-400 mt-3">No online payment is connected yet.</p>
+    </div>
+  </div>
+
+  <!-- Order modal -->
+  <div id="orderModal" class="hidden fixed inset-0 z-[60] modal-backdrop items-center justify-center p-4">
+    <div class="bg-white rounded-3xl w-full max-w-md p-6 shadow-2xl">
+      <div class="flex justify-between items-center"><div><h3 class="text-xl font-black">Buy TraxiGo</h3><p class="text-xs text-slate-500">₹790 • Order request</p></div><button onclick="closeOrder()" class="text-2xl">×</button></div>
+      <p class="text-sm text-slate-600 mt-4">Continue to the order form to enter your delivery and contact details.</p>
+      <button onclick="closeOrder();document.getElementById('order').scrollIntoView({behavior:'smooth'});" class="w-full mt-5 brand-gradient text-white font-black py-3.5 rounded-xl">CONTINUE TO ORDER FORM</button>
+      <a href="https://wa.me/919914166744?text=Hi%20TraxiGo%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="block w-full mt-2 bg-green-50 text-green-700 text-center font-black py-3.5 rounded-xl">ENQUIRE ON WHATSAPP</a>
+    </div>
+  </div>
+
+<script>
+  const mainMedia=document.getElementById('mainMedia');
+  const mainVideo=document.getElementById('mainVideo');
+  const mediaFallback=document.getElementById('mediaFallback');
+  function showMediaFallback(){ mediaFallback.classList.remove('hidden'); mediaFallback.classList.add('flex'); }
+  function hideMediaFallback(){ mediaFallback.classList.add('hidden'); mediaFallback.classList.remove('flex'); }
+  mainMedia.addEventListener('error', showMediaFallback);
+  mainMedia.addEventListener('load', hideMediaFallback);
+  mainVideo.addEventListener('error', showMediaFallback);
+  mainVideo.addEventListener('loadeddata', hideMediaFallback);
+  mainVideo.muted=true;
+  mainVideo.play().catch(()=>{});
+  document.querySelectorAll('.gallery-thumb').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.gallery-thumb').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      if(btn.dataset.type==='video'){
+        mainMedia.classList.add('hidden'); mainVideo.classList.remove('hidden');
+        mainVideo.currentTime=0; mainVideo.play().catch(()=>{});
+      }else{
+        mainVideo.pause(); mainVideo.classList.add('hidden'); mainMedia.classList.remove('hidden');
+        mainMedia.src=btn.dataset.src;
+      }
+    });
+  });
+  function syncCart(){
+    const n=Math.max(0,Number(localStorage.getItem('traxigoCart')||0));
+    document.getElementById('cartCount').textContent=n;
+    document.getElementById('cartQty').textContent=n;
+    document.getElementById('cartTotal').textContent='₹'+(n*790).toLocaleString('en-IN');
+  }
+  function addToCart(){
+    const n=Number(localStorage.getItem('traxigoCart')||0)+1;
+    localStorage.setItem('traxigoCart',n);
+    syncCart();
+    const b=document.getElementById('cartCount');
+    b.animate([{transform:'scale(1)'},{transform:'scale(1.35)'},{transform:'scale(1)'}],{duration:350});
+  }
+  function changeCart(delta){
+    let n=Math.max(0,Number(localStorage.getItem('traxigoCart')||0)+delta);
+    localStorage.setItem('traxigoCart',n);
+    syncCart();
+  }
+  function openCart(){syncCart();document.getElementById('cartModal').classList.remove('hidden');document.getElementById('cartModal').classList.add('flex')}
+  function closeCart(){document.getElementById('cartModal').classList.add('hidden');document.getElementById('cartModal').classList.remove('flex')}
+  syncCart();
+  function openOrder(){document.getElementById('orderModal').classList.remove('hidden');document.getElementById('orderModal').classList.add('flex')}
+  function closeOrder(){document.getElementById('orderModal').classList.add('hidden');document.getElementById('orderModal').classList.remove('flex')}
+  document.getElementById('orderModal').addEventListener('click',e=>{if(e.target.id==='orderModal')closeOrder()});
+  document.getElementById('cartModal').addEventListener('click',e=>{if(e.target.id==='cartModal')closeCart()});
+  function toggleFaq(btn){btn.parentElement.classList.toggle('open')}
+  document.getElementById('leadForm').addEventListener('submit',function(e){
+    const status=document.getElementById('formStatus');
+    status.textContent='Sending your details…';
+    // FormSubmit handles the actual email delivery. If its endpoint is blocked,
+    // the normal HTML form submission remains available.
+  });
+</script>
+</body>
+</html>
