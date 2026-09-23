@@ -1,0 +1,1 @@
+Standalone build: index.html contains embedded logo, video and gallery images, so media loads even if only index.html is uploaded. assets/ is also included as a backup.
